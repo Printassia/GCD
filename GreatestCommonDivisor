@@ -1,27 +1,24 @@
-        public static int GCD(int number1, int number2){
-        int GCD = 1;
+public static int GCD(int number1, int number2){
+   int GCD = 1;
 
-        for(int loopCounter = 1; loopCounter <= number1 &&
-                loopCounter <= number2; loopCounter++)
-        {
+   for(int loopCounter = 1; loopCounter <= number1 &&
+           loopCounter <= number2; loopCounter++){
             if(number1 % loopCounter == 0 && number2 % loopCounter == 0)
                 GCD = loopCounter;
-        }
+                }
         return GCD;
     }
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Please enter first number to find the GCD: ");
+    int number1 = input.nextInt();
 
-        Scanner input = new Scanner(System.in);
+    System.out.print("Please enter second number to find the GCD: ");
+    int number2 = input.nextInt();
 
-        System.out.print("Please enter first number to find the GCD: ");
-        int number1 = input.nextInt();
-
-        System.out.print("Please enter second number to find the GCD: ");
-        int number2 = input.nextInt();
-
-        System.out.print("Th GCD of " + number1 + " and " + number2 +
+    System.out.print("Th GCD of " + number1 + " and " + number2 +
                 " is " + GCD(number1, number2));
 
-        input.close();
+    input.close();
     }
